@@ -72,6 +72,12 @@
                 <constraint firstAttribute="bottom" secondItem="x4b-rN-90W" secondAttribute="bottom" constant="3" id="MPL-7P-ZsU"/>
             </constraints>
             <size key="customSize" width="361" height="579"/>
+            <connections>
+                <outlet property="dateMovie" destination="CW3-l8-Vsh" id="hqx-iL-uGs"/>
+                <outlet property="overviewMovie" destination="Fy7-HC-fHA" id="reH-Tu-stY"/>
+                <outlet property="posterMovie" destination="Ycc-WE-WQ8" id="EAL-j0-7Mf"/>
+                <outlet property="titleMovie" destination="jGP-nt-Zwz" id="gmp-Bz-XwB"/>
+            </connections>
             <point key="canvasLocation" x="154.96183206106869" y="173.59154929577466"/>
         </collectionViewCell>
     </objects>
