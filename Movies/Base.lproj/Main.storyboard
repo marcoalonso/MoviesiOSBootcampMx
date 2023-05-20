@@ -11,7 +11,7 @@
         <!--Inicio Sesion-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
                     <connections>
                         <outlet property="contrasena" destination="qGS-yh-boI" id="9HV-LS-S0C"/>
                         <outlet property="correo" destination="keV-IY-dyy" id="YDo-vU-sXu"/>
-                        <segue destination="c2x-Vk-6id" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="Bf8-Nx-o9h"/>
+                        <segue destination="c2x-Vk-6id" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="hzA-9E-PIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -252,32 +252,42 @@
             </objects>
             <point key="canvasLocation" x="1882" y="380"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="VbC-Cb-Aby">
             <objects>
-                <viewController id="0K1-1h-5AR" sceneMemberID="viewController">
+                <viewController id="0K1-1h-5AR" customClass="HomeViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjx-9W-4XF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffe" translatesAutoresizingMaskIntoConstraints="NO" id="HiY-5N-f1Y">
-                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-6a-f1A">
+                                <rect key="frame" x="311" y="83" width="58" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Salir"/>
+                                <connections>
+                                    <action selector="salirButton:" destination="0K1-1h-5AR" eventType="touchUpInside" id="0zl-Lw-z10"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffe" translatesAutoresizingMaskIntoConstraints="NO" id="2sw-yS-GMg">
+                                <rect key="frame" x="16" y="118" width="361" height="663"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PvT-9U-TBp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HiY-5N-f1Y" firstAttribute="top" secondItem="PvT-9U-TBp" secondAttribute="top" id="Cpt-4K-c5e"/>
-                            <constraint firstItem="HiY-5N-f1Y" firstAttribute="leading" secondItem="hjx-9W-4XF" secondAttribute="leading" id="DMU-k5-Sv6"/>
-                            <constraint firstAttribute="trailing" secondItem="HiY-5N-f1Y" secondAttribute="trailing" id="Qax-QB-r80"/>
-                            <constraint firstItem="PvT-9U-TBp" firstAttribute="bottom" secondItem="HiY-5N-f1Y" secondAttribute="bottom" id="Xih-XB-mXs"/>
+                            <constraint firstItem="2sw-yS-GMg" firstAttribute="leading" secondItem="PvT-9U-TBp" secondAttribute="leading" id="2lc-1q-Vo3"/>
+                            <constraint firstItem="PvT-9U-TBp" firstAttribute="bottom" secondItem="2sw-yS-GMg" secondAttribute="bottom" id="4Uh-1y-vMm"/>
+                            <constraint firstItem="PvT-9U-TBp" firstAttribute="trailing" secondItem="2sw-yS-GMg" secondAttribute="trailing" id="kJj-sn-MdO"/>
+                            <constraint firstItem="2sw-yS-GMg" firstAttribute="top" secondItem="5PF-6a-f1A" secondAttribute="bottom" id="vZi-Hp-S3N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="ceD-1d-Ytj"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ceD-1d-Ytj"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-bc-aqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3587" y="-54"/>
+            <point key="canvasLocation" x="3936.6412213740455" y="-86.619718309859152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">
@@ -318,7 +328,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bf8-Nx-o9h"/>
+        <segue reference="hzA-9E-PIh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="512" height="512"/>
