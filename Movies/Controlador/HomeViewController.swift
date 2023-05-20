@@ -10,6 +10,8 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
+    let manager = MoviesManager()
+    
     ///Una instancia de bd userdefaults
     let defaults = UserDefaults.standard
 
@@ -18,6 +20,10 @@ class HomeViewController: UIViewController {
 
         //Guardar sesion en BD
         defaults.set("logueado", forKey: "sesionIniciada")
+        
+        manager.getPopularMovies { listadoPeliculas in
+            print("num pelis: \(listadoPeliculas.count)")
+        }
     }
     
 
