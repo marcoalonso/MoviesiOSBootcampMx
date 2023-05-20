@@ -261,24 +261,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-6a-f1A">
-                                <rect key="frame" x="311" y="83" width="58" height="35"/>
+                                <rect key="frame" x="167.66666666666666" y="408.66666666666669" width="58" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Salir"/>
                                 <connections>
                                     <action selector="salirButton:" destination="0K1-1h-5AR" eventType="touchUpInside" id="0zl-Lw-z10"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffe" translatesAutoresizingMaskIntoConstraints="NO" id="2sw-yS-GMg">
-                                <rect key="frame" x="16" y="118" width="361" height="663"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PvT-9U-TBp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2sw-yS-GMg" firstAttribute="leading" secondItem="PvT-9U-TBp" secondAttribute="leading" id="2lc-1q-Vo3"/>
-                            <constraint firstItem="PvT-9U-TBp" firstAttribute="bottom" secondItem="2sw-yS-GMg" secondAttribute="bottom" id="4Uh-1y-vMm"/>
-                            <constraint firstItem="PvT-9U-TBp" firstAttribute="trailing" secondItem="2sw-yS-GMg" secondAttribute="trailing" id="kJj-sn-MdO"/>
-                            <constraint firstItem="2sw-yS-GMg" firstAttribute="top" secondItem="5PF-6a-f1A" secondAttribute="bottom" id="vZi-Hp-S3N"/>
+                            <constraint firstItem="5PF-6a-f1A" firstAttribute="centerX" secondItem="hjx-9W-4XF" secondAttribute="centerX" id="7vP-Y5-QdT"/>
+                            <constraint firstItem="5PF-6a-f1A" firstAttribute="centerY" secondItem="hjx-9W-4XF" secondAttribute="centerY" id="thy-c2-DEk"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -287,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-bc-aqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3936.6412213740455" y="-86.619718309859152"/>
+            <point key="canvasLocation" x="3672.5190839694656" y="-69.014084507042256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">
@@ -332,7 +327,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="512" height="512"/>
-        <image name="coffe" width="410" height="897"/>
         <image name="face2" width="512" height="512"/>
         <image name="fondo" width="612" height="345"/>
         <image name="fondo2" width="626" height="391"/>

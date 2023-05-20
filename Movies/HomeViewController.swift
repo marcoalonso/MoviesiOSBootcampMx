@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -23,7 +24,14 @@ class HomeViewController: UIViewController {
     @IBAction func salirButton(_ sender: UIButton) {
         //Borrar la sesion 
         defaults.removeObject(forKey: "sesionIniciada")
-        navegarLogin()
+        
+        //Cerrar sesion en firebase
+        do {
+            try Auth.auth().signOut()
+            navegarLogin()
+        } catch {
+            print("Debug: error al cerrar sesion \(error.localizedDescription)")
+        }
     }
     
     func navegarLogin(){
