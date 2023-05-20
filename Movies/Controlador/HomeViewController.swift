@@ -30,8 +30,16 @@ class HomeViewController: UIViewController {
         
         defaults.set("logueado", forKey: "sesionIniciada")
         
+        obtenerPeliculas()
+    }
+    
+    func obtenerPeliculas(){
         manager.getPopularMovies { listadoPeliculas in
-            print("num pelis: \(listadoPeliculas.count)")
+            self.peliculas = listadoPeliculas
+            
+            DispatchQueue.main.async {
+                self.moviesCollection.reloadData()
+            }
         }
     }
     
@@ -68,9 +76,10 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "celda", for: indexPath) as! MovieCell
         
         celda.posterMovie.image = UIImage(systemName: "note")
-        celda.titleMovie.text = "Mario Bros"
-        celda.dateMovie.text = "Mayo 2023"
-        celda.overviewMovie.text = "Descripcion pelicula"
+        print(peliculas[indexPath.row].poster_path)
+        celda.titleMovie.text = peliculas[indexPath.row].title
+        celda.dateMovie.text = peliculas[indexPath.row].release_date
+        celda.overviewMovie.text = peliculas[indexPath.row].overview
         
         return celda
     }

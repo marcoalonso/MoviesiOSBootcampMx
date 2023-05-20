@@ -23,6 +23,7 @@
 		6CAEBE1B2A193FD100C4D651 /* MovieDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBE1A2A193FD100C4D651 /* MovieDataModel.swift */; };
 		6CAEBE1F2A1944D900C4D651 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBE1D2A1944D900C4D651 /* MovieCell.swift */; };
 		6CAEBE202A1944D900C4D651 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEBE1E2A1944D900C4D651 /* MovieCell.xib */; };
+		6CAEBE232A194AB700C4D651 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAEBE222A194AB700C4D651 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAEBE232A194AB700C4D651 /* Kingfisher in Frameworks */,
 				6CAEBE0D2A191F1200C4D651 /* FirebaseAuth in Frameworks */,
 				6CAEBE0F2A191F1200C4D651 /* FirebaseFirestore in Frameworks */,
 			);
@@ -138,6 +140,7 @@
 			packageProductDependencies = (
 				6CAEBE0C2A191F1200C4D651 /* FirebaseAuth */,
 				6CAEBE0E2A191F1200C4D651 /* FirebaseFirestore */,
+				6CAEBE222A194AB700C4D651 /* Kingfisher */,
 			);
 			productName = Movies;
 			productReference = 6CAEBDF22A191C4C00C4D651 /* Movies.app */;
@@ -169,6 +172,7 @@
 			mainGroup = 6CAEBDE92A191C4C00C4D651;
 			packageReferences = (
 				6CAEBE0B2A191F1200C4D651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6CAEBE212A194AB700C4D651 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6CAEBDF32A191C4C00C4D651 /* Products */;
 			projectDirPath = "";
@@ -435,6 +439,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		6CAEBE212A194AB700C4D651 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -447,6 +459,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6CAEBE0B2A191F1200C4D651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		6CAEBE222A194AB700C4D651 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CAEBE212A194AB700C4D651 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
