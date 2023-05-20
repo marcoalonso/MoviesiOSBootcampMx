@@ -82,6 +82,9 @@
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlP-bM-y0t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLV-BV-uBa">
                                         <rect key="frame" x="0.0" y="340" width="373" height="35"/>
@@ -116,10 +119,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio Sesion" id="P4k-Ja-ihg"/>
+                    <connections>
+                        <outlet property="contrasena" destination="qGS-yh-boI" id="9HV-LS-S0C"/>
+                        <outlet property="correo" destination="keV-IY-dyy" id="YDo-vU-sXu"/>
+                        <segue destination="c2x-Vk-6id" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="Bf8-Nx-o9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.3969465648854" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="995" y="-54"/>
         </scene>
         <!--Registro View Controller-->
         <scene sceneID="2Jd-oX-U7M">
@@ -269,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-bc-aqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3584" y="380"/>
+            <point key="canvasLocation" x="3587" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">
@@ -306,9 +314,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0b-Hx-UHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2772" y="380"/>
+            <point key="canvasLocation" x="2773" y="-54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bf8-Nx-o9h"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="512" height="512"/>
         <image name="coffe" width="410" height="897"/>
