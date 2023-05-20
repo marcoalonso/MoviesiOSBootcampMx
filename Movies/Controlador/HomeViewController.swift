@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Kingfisher
 
 class HomeViewController: UIViewController {
     
@@ -31,6 +32,15 @@ class HomeViewController: UIViewController {
         defaults.set("logueado", forKey: "sesionIniciada")
         
         obtenerPeliculas()
+        
+        setupCollection()
+    }
+    
+    private func setupCollection(){
+        moviesCollection.collectionViewLayout = UICollectionViewFlowLayout()
+        if let flowLayout = moviesCollection.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+        }
     }
     
     func obtenerPeliculas(){
@@ -67,7 +77,7 @@ class HomeViewController: UIViewController {
 }
 
 // MARK:  CollectionView
-extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return peliculas.count
     }
@@ -75,8 +85,10 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "celda", for: indexPath) as! MovieCell
         
-        celda.posterMovie.image = UIImage(systemName: "note")
-        print(peliculas[indexPath.row].poster_path)
+        if let url = URL(string: "\(Constants.urlImages)\(peliculas[indexPath.row].poster_path ?? "")") {
+            celda.posterMovie.kf.setImage(with: url)
+        }
+        
         celda.titleMovie.text = peliculas[indexPath.row].title
         celda.dateMovie.text = peliculas[indexPath.row].release_date
         celda.overviewMovie.text = peliculas[indexPath.row].overview
@@ -84,5 +96,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return celda
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 195, height: 320)
+    }
     
 }

@@ -11,38 +11,47 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCell" customModule="Movies" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="361" height="579"/>
+            <rect key="frame" x="0.0" y="0.0" width="230" height="319"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="361" height="579"/>
+                <rect key="frame" x="0.0" y="0.0" width="230" height="319"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4b-rN-90W">
-                        <rect key="frame" x="3" y="3" width="355" height="573"/>
+                        <rect key="frame" x="3" y="3" width="224" height="313"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PJv-oY-RDm">
-                                <rect key="frame" x="3" y="3" width="349" height="567"/>
+                                <rect key="frame" x="3" y="3" width="218" height="307"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="megan" translatesAutoresizingMaskIntoConstraints="NO" id="Ycc-WE-WQ8">
-                                        <rect key="frame" x="0.0" y="0.0" width="349" height="402"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="210"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="210" id="ucx-aL-A8m"/>
+                                        </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-ob-vHN">
-                                        <rect key="frame" x="0.0" y="402" width="349" height="165"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-ob-vHN">
+                                        <rect key="frame" x="0.0" y="210" width="218" height="97"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Megan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGP-nt-Zwz">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="218" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="oSs-l5-1Rw"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Mayo 2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-l8-Vsh">
-                                                <rect key="frame" x="0.0" y="23.333333333333314" width="349" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="22" width="218" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="PjM-4h-uZS"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-HC-fHA">
-                                                <rect key="frame" x="0.0" y="46.666666666666679" width="349" height="118.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="44" width="218" height="53"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">eter Quill, aún conmocionado por la pérdida de Gamora, debe reunir a su equipo en torno a él para defender el universo junto con la protección de uno de los suyos. Una misión que, si no se lleva a cabo con éxito, podría suponer el fin de los Guardianes tal y como los conocemos.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -52,6 +61,11 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,6 +75,11 @@
                             <constraint firstAttribute="bottom" secondItem="PJv-oY-RDm" secondAttribute="bottom" constant="3" id="r6a-xB-4e1"/>
                             <constraint firstItem="PJv-oY-RDm" firstAttribute="top" secondItem="x4b-rN-90W" secondAttribute="top" constant="3" id="ujN-tg-LkA"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -71,14 +90,14 @@
                 <constraint firstItem="x4b-rN-90W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="D52-Zc-2zj"/>
                 <constraint firstAttribute="bottom" secondItem="x4b-rN-90W" secondAttribute="bottom" constant="3" id="MPL-7P-ZsU"/>
             </constraints>
-            <size key="customSize" width="361" height="579"/>
+            <size key="customSize" width="230" height="319"/>
             <connections>
                 <outlet property="dateMovie" destination="CW3-l8-Vsh" id="hqx-iL-uGs"/>
                 <outlet property="overviewMovie" destination="Fy7-HC-fHA" id="reH-Tu-stY"/>
                 <outlet property="posterMovie" destination="Ycc-WE-WQ8" id="EAL-j0-7Mf"/>
                 <outlet property="titleMovie" destination="jGP-nt-Zwz" id="gmp-Bz-XwB"/>
             </connections>
-            <point key="canvasLocation" x="154.96183206106869" y="173.59154929577466"/>
+            <point key="canvasLocation" x="53.435114503816791" y="82.042253521126767"/>
         </collectionViewCell>
     </objects>
     <resources>
