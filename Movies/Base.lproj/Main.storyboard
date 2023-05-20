@@ -122,7 +122,7 @@
                     <connections>
                         <outlet property="contrasena" destination="qGS-yh-boI" id="9HV-LS-S0C"/>
                         <outlet property="correo" destination="keV-IY-dyy" id="YDo-vU-sXu"/>
-                        <segue destination="c2x-Vk-6id" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="hzA-9E-PIh"/>
+                        <segue destination="0K1-1h-5AR" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="nYX-jT-dyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -244,7 +244,7 @@
                     <connections>
                         <outlet property="contrasenaTextField" destination="Z1i-jJ-SKk" id="W0Y-xM-Ove"/>
                         <outlet property="correoTextField" destination="GR3-9q-BBC" id="84l-9L-dlN"/>
-                        <segue destination="c2x-Vk-6id" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="1UX-x0-e1w"/>
+                        <segue destination="0K1-1h-5AR" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="ti8-1L-OkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="672-En-nx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -302,28 +302,9 @@
             </objects>
             <point key="canvasLocation" x="81.679389312977094" y="-27.464788732394368"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FGb-na-fgJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2x-Vk-6id" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="eGt-T5-l8S"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="un1-Dk-Hsg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0K1-1h-5AR" kind="relationship" relationship="rootViewController" id="Cih-05-OXL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B0b-Hx-UHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2773" y="-54"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hzA-9E-PIh"/>
+        <segue reference="ti8-1L-OkI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="512" height="512"/>
