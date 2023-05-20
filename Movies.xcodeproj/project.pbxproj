@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6CAEBDF62A191C4C00C4D651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBDF52A191C4C00C4D651 /* AppDelegate.swift */; };
 		6CAEBDF82A191C4C00C4D651 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBDF72A191C4C00C4D651 /* SceneDelegate.swift */; };
-		6CAEBDFA2A191C4C00C4D651 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBDF92A191C4C00C4D651 /* ViewController.swift */; };
+		6CAEBDFA2A191C4C00C4D651 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBDF92A191C4C00C4D651 /* LoginViewController.swift */; };
 		6CAEBDFD2A191C4C00C4D651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEBDFB2A191C4C00C4D651 /* Main.storyboard */; };
 		6CAEBDFF2A191C4D00C4D651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEBDFE2A191C4D00C4D651 /* Assets.xcassets */; };
 		6CAEBE022A191C4D00C4D651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAEBE002A191C4D00C4D651 /* LaunchScreen.storyboard */; };
@@ -17,19 +17,21 @@
 		6CAEBE0D2A191F1200C4D651 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAEBE0C2A191F1200C4D651 /* FirebaseAuth */; };
 		6CAEBE0F2A191F1200C4D651 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CAEBE0E2A191F1200C4D651 /* FirebaseFirestore */; };
 		6CAEBE112A19234F00C4D651 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBE102A19234F00C4D651 /* UIVIew+Extension.swift */; };
+		6CAEBE132A19275F00C4D651 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAEBE122A19275F00C4D651 /* RegistroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CAEBDF22A191C4C00C4D651 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CAEBDF52A191C4C00C4D651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CAEBDF72A191C4C00C4D651 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6CAEBDF92A191C4C00C4D651 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CAEBDF92A191C4C00C4D651 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6CAEBDFC2A191C4C00C4D651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CAEBDFE2A191C4D00C4D651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CAEBE012A191C4D00C4D651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CAEBE032A191C4D00C4D651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CAEBE092A191DEB00C4D651 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CAEBE102A19234F00C4D651 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
+		6CAEBE122A19275F00C4D651 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,14 @@
 			children = (
 				6CAEBDF52A191C4C00C4D651 /* AppDelegate.swift */,
 				6CAEBDF72A191C4C00C4D651 /* SceneDelegate.swift */,
-				6CAEBDF92A191C4C00C4D651 /* ViewController.swift */,
+				6CAEBDF92A191C4C00C4D651 /* LoginViewController.swift */,
 				6CAEBDFB2A191C4C00C4D651 /* Main.storyboard */,
 				6CAEBDFE2A191C4D00C4D651 /* Assets.xcassets */,
 				6CAEBE002A191C4D00C4D651 /* LaunchScreen.storyboard */,
 				6CAEBE032A191C4D00C4D651 /* Info.plist */,
 				6CAEBE092A191DEB00C4D651 /* GoogleService-Info.plist */,
 				6CAEBE102A19234F00C4D651 /* UIVIew+Extension.swift */,
+				6CAEBE122A19275F00C4D651 /* RegistroViewController.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -156,9 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CAEBDFA2A191C4C00C4D651 /* ViewController.swift in Sources */,
+				6CAEBDFA2A191C4C00C4D651 /* LoginViewController.swift in Sources */,
 				6CAEBDF62A191C4C00C4D651 /* AppDelegate.swift in Sources */,
 				6CAEBE112A19234F00C4D651 /* UIVIew+Extension.swift in Sources */,
+				6CAEBE132A19275F00C4D651 /* RegistroViewController.swift in Sources */,
 				6CAEBDF82A191C4C00C4D651 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
