@@ -341,11 +341,44 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moviesCollection" destination="AZS-Bw-cB9" id="oL4-B5-nb8"/>
+                        <segue destination="Gfy-5z-P4h" kind="presentation" identifier="detalleMovie" id="uS4-58-iqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-bc-aqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3672.5190839694656" y="-69.014084507042256"/>
+        </scene>
+        <!--Detalle Movie View Controller-->
+        <scene sceneID="RKo-ok-3pT">
+            <objects>
+                <viewController id="Gfy-5z-P4h" customClass="DetalleMovieViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RBf-5V-NO0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-9I-pfs" customClass="YTPlayerView">
+                                <rect key="frame" x="20" y="20" width="353" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="K4I-j8-v5j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dcu-Ua-Cts"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W4n-9I-pfs" firstAttribute="top" secondItem="Dcu-Ua-Cts" secondAttribute="top" constant="20" id="3Rq-u5-oze"/>
+                            <constraint firstItem="Dcu-Ua-Cts" firstAttribute="trailing" secondItem="W4n-9I-pfs" secondAttribute="trailing" constant="20" id="HQx-CN-hJS"/>
+                            <constraint firstItem="W4n-9I-pfs" firstAttribute="leading" secondItem="Dcu-Ua-Cts" secondAttribute="leading" constant="20" id="tZf-x1-0gN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="W4n-9I-pfs" id="t4P-Rb-z9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLH-ij-mGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4501.5267175572517" y="-76.056338028169023"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">
@@ -379,6 +412,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

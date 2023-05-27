@@ -112,6 +112,8 @@ class HomeViewController: UIViewController {
 
 // MARK:  CollectionView
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return peliculas.count
     }
@@ -133,5 +135,13 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 195, height: 320)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(peliculas[indexPath.row])
+        performSegue(withIdentifier: "detalleMovie", sender: self)
+    }
+    
+    
+    
     
 }
