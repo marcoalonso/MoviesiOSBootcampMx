@@ -277,6 +277,9 @@
                                                     <segment title="Estrenos"/>
                                                     <segment title="Top Rated"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="tipoPeliculasSegmented:" destination="0K1-1h-5AR" eventType="valueChanged" id="xR8-NR-xuq"/>
+                                                </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-6a-f1A">
                                                 <rect key="frame" x="313" y="0.0" width="60" height="45"/>

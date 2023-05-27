@@ -14,7 +14,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var moviesCollection: UICollectionView!
     
-    var peliculas: [DataMovie] = []
+    var peliculas : [DataMovie] = []
+    var popularMovies : [DataMovie] = []
+    var upcominMovies : [DataMovie] = []
     
     let manager = MoviesManager()
     
@@ -45,11 +47,17 @@ class HomeViewController: UIViewController {
     
     func obtenerPeliculas(){
         manager.getPopularMovies { listadoPeliculas in
+            self.popularMovies = listadoPeliculas
             self.peliculas = listadoPeliculas
             
             DispatchQueue.main.async {
                 self.moviesCollection.reloadData()
             }
+        }
+        
+        manager.getUpcominMovies { listadoPeliculas in
+            print("getUpcominMovies: \(listadoPeliculas.count)")
+            self.upcominMovies = listadoPeliculas
         }
     }
     
@@ -61,7 +69,33 @@ class HomeViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-
+    @IBAction func tipoPeliculasSegmented(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.peliculas.removeAll()
+            self.peliculas = popularMovies
+            
+            DispatchQueue.main.async {
+                self.moviesCollection.reloadData()
+            }
+            
+        case 1:
+            print("estrenos")
+            self.peliculas.removeAll()
+            self.peliculas = upcominMovies
+            
+            DispatchQueue.main.async {
+                self.moviesCollection.reloadData()
+            }
+            
+        case 2:
+            print("topRated")
+        default:
+            print("default")
+        }
+    }
+    
     @IBAction func salirButton(_ sender: UIButton) {
         //Borrar la sesion 
         defaults.removeObject(forKey: "sesionIniciada")

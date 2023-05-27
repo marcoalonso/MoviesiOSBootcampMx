@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
         present(alerta, animated: true)
     }
 
+    
+    
     @IBAction func loginButton(_ sender: UIButton) {
         if let email = correo.text, let password = contrasena.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
