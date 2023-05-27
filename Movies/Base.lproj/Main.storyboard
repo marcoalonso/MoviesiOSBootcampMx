@@ -356,50 +356,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-9I-pfs" customClass="YTPlayerView">
-                                <rect key="frame" x="20" y="20" width="353" height="250"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="K4I-j8-v5j"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rapidos y furiosos X" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDt-e5-bTA">
-                                <rect key="frame" x="28" y="284" width="345" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fecha estreno: 25 Mayo 2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-7A-oyR">
-                                <rect key="frame" x="45" y="359" width="241" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ge-Cw-rM2">
-                                <rect key="frame" x="28" y="397" width="339" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Otx-nG-8PF">
+                                <rect key="frame" x="20" y="0.0" width="353" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-Vd-JDk">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="250"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4n-9I-pfs" customClass="YTPlayerView">
+                                                <rect key="frame" x="-20" y="0.0" width="393" height="250"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="W4n-9I-pfs" firstAttribute="leading" secondItem="ii2-Vd-JDk" secondAttribute="leading" constant="-20" id="5y5-U2-wLV"/>
+                                            <constraint firstAttribute="height" constant="250" id="HwK-Od-iEO"/>
+                                            <constraint firstItem="W4n-9I-pfs" firstAttribute="top" secondItem="ii2-Vd-JDk" secondAttribute="top" id="bR6-Qu-YYI"/>
+                                            <constraint firstAttribute="trailing" secondItem="W4n-9I-pfs" secondAttribute="trailing" constant="-20" id="e8s-hQ-Oo0"/>
+                                            <constraint firstAttribute="bottom" secondItem="W4n-9I-pfs" secondAttribute="bottom" id="wIP-g5-m5l"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rapidos y furiosos X" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDt-e5-bTA">
+                                        <rect key="frame" x="0.0" y="260" width="353" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="83S-ay-808"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fecha estreno: 25 Mayo 2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-7A-oyR">
+                                        <rect key="frame" x="0.0" y="360" width="353" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="lis-vN-3Zp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ge-Cw-rM2">
+                                        <rect key="frame" x="0.0" y="395" width="353" height="447"/>
+                                        <string key="text">Mientras trabaja bajo tierra para arreglar una tubería de agua, los plomeros de Brooklyn Mario y su hermano Luigi son transportados por una misteriosa tubería y llegan a un nuevo mundo mágico. Pero cuando los hermanos se separan, Mario se embarca en una búsqueda épica para encontrar a Luigi. Con la ayuda de un residente del Reino Champiñón, Toad y algo de entrenamiento de la gobernante del Reino Champiñón, la Princesa Peach, Mario conocerá su propio poder.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dcu-Ua-Cts"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W4n-9I-pfs" firstAttribute="top" secondItem="Dcu-Ua-Cts" secondAttribute="top" constant="20" id="3Rq-u5-oze"/>
-                            <constraint firstItem="Dcu-Ua-Cts" firstAttribute="trailing" secondItem="W4n-9I-pfs" secondAttribute="trailing" constant="20" id="HQx-CN-hJS"/>
-                            <constraint firstItem="W4n-9I-pfs" firstAttribute="leading" secondItem="Dcu-Ua-Cts" secondAttribute="leading" constant="20" id="tZf-x1-0gN"/>
+                            <constraint firstItem="Otx-nG-8PF" firstAttribute="top" secondItem="Dcu-Ua-Cts" secondAttribute="top" id="8Of-8K-2dt"/>
+                            <constraint firstItem="Dcu-Ua-Cts" firstAttribute="bottom" secondItem="Otx-nG-8PF" secondAttribute="bottom" id="SkC-yD-QKw"/>
+                            <constraint firstAttribute="trailing" secondItem="Otx-nG-8PF" secondAttribute="trailing" constant="20" id="eTB-Nz-may"/>
+                            <constraint firstItem="Otx-nG-8PF" firstAttribute="leading" secondItem="Dcu-Ua-Cts" secondAttribute="leading" constant="20" id="zZ7-Ry-hop"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descripcionMovie" destination="7Ge-Cw-rM2" id="eGz-O7-q8O"/>
+                        <outlet property="fechaMovie" destination="Wqw-7A-oyR" id="4P7-Zc-8QL"/>
+                        <outlet property="nombreMovie" destination="gDt-e5-bTA" id="4L1-p2-z4E"/>
                         <outlet property="playerView" destination="W4n-9I-pfs" id="t4P-Rb-z9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLH-ij-mGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4501.5267175572517" y="-76.056338028169023"/>
+            <point key="canvasLocation" x="4488" y="-69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">

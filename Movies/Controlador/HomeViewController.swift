@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
     var popularMovies : [DataMovie] = []
     var upcominMovies : [DataMovie] = []
     
+    var peliculaSeleccionada: DataMovie?
+    
     let manager = MoviesManager()
     
     ///Una instancia de bd userdefaults
@@ -137,11 +139,19 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(peliculas[indexPath.row])
+        
+        peliculaSeleccionada = peliculas[indexPath.row]
+        
         performSegue(withIdentifier: "detalleMovie", sender: self)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detalleMovie" {
+            //Crear una instancia de la segunda pantalla para acceder a sus atributos
+            let objDetalleMovie = segue.destination as! DetalleMovieViewController
+            objDetalleMovie.recibirMovieMostrar = peliculaSeleccionada
+        }
+    }
     
     
 }
