@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dpR-Hx-LU8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -123,7 +123,7 @@
                     <connections>
                         <outlet property="contrasena" destination="qGS-yh-boI" id="9HV-LS-S0C"/>
                         <outlet property="correo" destination="keV-IY-dyy" id="YDo-vU-sXu"/>
-                        <segue destination="0K1-1h-5AR" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="nYX-jT-dyG"/>
+                        <segue destination="dTs-bN-FgH" kind="presentation" identifier="loginGoToHome" modalPresentationStyle="fullScreen" id="nYX-jT-dyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -245,7 +245,7 @@
                     <connections>
                         <outlet property="contrasenaTextField" destination="Z1i-jJ-SKk" id="W0Y-xM-Ove"/>
                         <outlet property="correoTextField" destination="GR3-9q-BBC" id="84l-9L-dlN"/>
-                        <segue destination="0K1-1h-5AR" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="ti8-1L-OkI"/>
+                        <segue destination="dTs-bN-FgH" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="ti8-1L-OkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="672-En-nx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="1882" y="380"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="VbC-Cb-Aby">
             <objects>
                 <viewController id="0K1-1h-5AR" customClass="HomeViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
@@ -262,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wll-vm-fy5">
-                                <rect key="frame" x="10" y="20" width="373" height="773"/>
+                                <rect key="frame" x="10" y="20" width="373" height="724"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ERY-He-Css">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="45"/>
@@ -305,8 +305,8 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-Bw-cB9">
-                                        <rect key="frame" x="0.0" y="65" width="373" height="708"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="65" width="373" height="659"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s3u-kJ-YSL">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -336,17 +336,18 @@
                             <constraint firstItem="wll-vm-fy5" firstAttribute="top" secondItem="PvT-9U-TBp" secondAttribute="top" constant="20" id="vqy-xw-faD"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="MuQ-Dz-Kia"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ceD-1d-Ytj"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moviesCollection" destination="AZS-Bw-cB9" id="oL4-B5-nb8"/>
-                        <segue destination="Gfy-5z-P4h" kind="presentation" identifier="detalleMovie" id="uS4-58-iqo"/>
+                        <segue destination="Gfy-5z-P4h" kind="presentation" identifier="detalleMovie" modalTransitionStyle="flipHorizontal" id="uS4-58-iqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-bc-aqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3672.5190839694656" y="-69.014084507042256"/>
+            <point key="canvasLocation" x="4599.2366412213742" y="-69.014084507042256"/>
         </scene>
         <!--Detalle Movie View Controller-->
         <scene sceneID="RKo-ok-3pT">
@@ -422,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLH-ij-mGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488" y="-69"/>
+            <point key="canvasLocation" x="5465" y="345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYe-ey-ywS">
@@ -442,15 +443,99 @@
             </objects>
             <point key="canvasLocation" x="81.679389312977094" y="-27.464788732394368"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1YH-yT-deO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dTs-bN-FgH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gnl-j1-Ng5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0K1-1h-5AR" kind="relationship" relationship="viewControllers" id="M0f-vv-GjT"/>
+                        <segue destination="0fO-iw-iIJ" kind="relationship" relationship="viewControllers" id="t9Y-rU-Yby"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ne-uC-TMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672.5190839694656" y="-69.014084507042256"/>
+        </scene>
+        <!--Buscar-->
+        <scene sceneID="h8f-ra-2gM">
+            <objects>
+                <viewController id="0fO-iw-iIJ" customClass="BuscarViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYf-x5-PvN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-lT-ryS">
+                                <rect key="frame" x="20" y="30" width="353" height="773"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="🔍 escribe el nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vua-Ei-c7T">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="V7P-bv-H7x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                                    </textField>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EMR-p6-CsN">
+                                        <rect key="frame" x="0.0" y="66" width="353" height="707"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nim-4c-PNZ">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celda" id="nWZ-pb-mPo">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CLP-S4-vXc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eSp-Qa-vai"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eSp-Qa-vai" firstAttribute="trailing" secondItem="2ZT-lT-ryS" secondAttribute="trailing" constant="20" id="G57-6z-CPv"/>
+                            <constraint firstItem="2ZT-lT-ryS" firstAttribute="top" secondItem="eSp-Qa-vai" secondAttribute="top" constant="30" id="NR2-U8-cuU"/>
+                            <constraint firstItem="eSp-Qa-vai" firstAttribute="bottom" secondItem="2ZT-lT-ryS" secondAttribute="bottom" id="nxR-qZ-N4D"/>
+                            <constraint firstItem="2ZT-lT-ryS" firstAttribute="leading" secondItem="eSp-Qa-vai" secondAttribute="leading" constant="20" id="qC3-q7-zkj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="magnifyingglass" catalog="system" id="vQM-Lo-Pwg"/>
+                    <connections>
+                        <outlet property="moviesCollection" destination="EMR-p6-CsN" id="jvm-eM-FUJ"/>
+                        <outlet property="nombreMovie" destination="Vua-Ei-c7T" id="ax9-6y-LoH"/>
+                        <segue destination="Gfy-5z-P4h" kind="presentation" identifier="trailer" id="wii-Dr-VEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpO-xS-voX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4502" y="632"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ti8-1L-OkI"/>
+        <segue reference="wii-Dr-VEE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="512" height="512"/>
         <image name="face2" width="512" height="512"/>
         <image name="fondo" width="612" height="345"/>
         <image name="fondo2" width="626" height="391"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

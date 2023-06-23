@@ -84,4 +84,32 @@ struct MoviesManager {
         
     }
     
+    
+    func searchMovies(nameOfMovie: String, completion: @escaping ([DataMovie]) -> Void) {
+        
+        guard let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=2cfa8720256036601fb9ac4e4bce1a9b&language=es-MX&include_adult=false&query=\(nameOfMovie)") else {
+            return
+        }
+        
+        let tarea = URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            guard let data = data else { return }
+            
+            do {
+             
+                let dataDecodificada = try JSONDecoder().decode(MovieDataModel.self, from: data)
+                let listaPeliculasEncotradas = dataDecodificada.results
+                
+                completion(listaPeliculasEncotradas)
+                
+            } catch {
+                print("Debug: error \(error.localizedDescription)")
+            }
+            
+        }
+        
+        tarea.resume()
+        
+    }
+    
 }
